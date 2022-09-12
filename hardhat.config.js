@@ -6,7 +6,8 @@ require("@nomiclabs/hardhat-etherscan");
 
 const {
   INFURA_KEY,
-  DEPLOYER_PRIVATE_KEY
+  DEPLOYER_PRIVATE_KEY,
+  ETHERSCAN_KEY
 } = process.env
 
 /** @type import('hardhat/config').HardhatUserConfig */
@@ -18,4 +19,9 @@ module.exports = {
       accounts: [`${DEPLOYER_PRIVATE_KEY}`],
     },
   },
+  etherscan: {
+    apiKey: {
+      rinkeby: ETHERSCAN_KEY
+    }
+  }
 };
