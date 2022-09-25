@@ -1,8 +1,10 @@
+/** @type import('hardhat/config').HardhatUserConfig */
 require('dotenv').config();
 
 require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-web3");
 require("@nomiclabs/hardhat-etherscan");
+require("@nomiclabs/hardhat-ethers");
 
 const {
   INFURA_KEY,
@@ -10,9 +12,9 @@ const {
   ETHERSCAN_KEY
 } = process.env
 
-/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.9",
+  defaultNetwork: "rinkeby",
   networks: {
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${INFURA_KEY}`,
