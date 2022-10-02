@@ -13,22 +13,24 @@ contract BirdgangToken is ERC20, ERC20Burnable, ERC20Snapshot, AccessControl, ER
     bytes32 public constant SNAPSHOT_ROLE = keccak256("SNAPSHOT_ROLE");
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 
-//    constructor() ERC20("birdgangToken", "BGT") ERC20Permit("birdgangToken") {
-//        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
-//        _grantRole(SNAPSHOT_ROLE, msg.sender);
-//        _mint(msg.sender, 1000000 * 10 ** decimals());
-//        _grantRole(MINTER_ROLE, msg.sender);
-//    }
-
-    constructor(string memory name, string memory symbol) ERC20(name, symbol) ERC20Permit(name) {
-        console.log("name : ", name);
-        console.log("msg.sender : ", msg.sender);
-
+    // deploy
+    constructor() ERC20("birdgangToken", "BGT") ERC20Permit("birdgangToken") {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(SNAPSHOT_ROLE, msg.sender);
         _mint(msg.sender, 1000000 * 10 ** decimals());
         _grantRole(MINTER_ROLE, msg.sender);
     }
+
+    // test
+//    constructor(string memory name, string memory symbol) ERC20(name, symbol) ERC20Permit(name) {
+//        console.log("name : ", name);
+//        console.log("msg.sender : ", msg.sender);
+//
+//        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
+//        _grantRole(SNAPSHOT_ROLE, msg.sender);
+//        _mint(msg.sender, 1000000 * 10 ** decimals());
+//        _grantRole(MINTER_ROLE, msg.sender);
+//    }
 
     function snapshot() public onlyRole(SNAPSHOT_ROLE) {
         _snapshot();

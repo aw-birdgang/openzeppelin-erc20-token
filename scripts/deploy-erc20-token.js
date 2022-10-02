@@ -7,7 +7,11 @@ async function main() {
     console.log('Deploying contracts with the account :', deployer.address);
 
     const Token = await ethers.getContractFactory("BirdgangToken");
-    const token = await Token.deploy("birdgangToken", "BGT");
+
+    // depoly
+    const token = await Token.deploy();
+    // test
+    // const token = await Token.deploy("birdgangToken", "BGT");
     console.log('Token address :', token.address);
 }
 
