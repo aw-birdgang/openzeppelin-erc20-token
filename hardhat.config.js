@@ -10,7 +10,8 @@ const {
   INFURA_KEY,
   DEPLOYER_PRIVATE_KEY,
   ETHERSCAN_KEY_RINKEBY,
-  ETHERSCAN_KEY_GOERLI
+  ETHERSCAN_KEY_GOERLI,
+  POLYGON_KEY_MUMBAI
 } = process.env
 
 module.exports = {
@@ -25,16 +26,6 @@ module.exports = {
       url: `https://ropsten.infura.io/v3/${INFURA_KEY}`,
       accounts: [`0x${DEPLOYER_PRIVATE_KEY}`],
     },
-    // rinkeby: {
-    //   url: "...",
-    //   accounts: {
-    //     mnemonic: "test test test test test test test test test test test junk",
-    //     path: "m/44'/60'/0'/0",
-    //     initialIndex: 0,
-    //     count: 20,
-    //     passphrase: "",
-    //   },
-    // },
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${INFURA_KEY}`,
       accounts: [`0x${DEPLOYER_PRIVATE_KEY}`],
@@ -59,7 +50,12 @@ module.exports = {
   etherscan: {
     apiKey: {
       rinkeby: ETHERSCAN_KEY_RINKEBY,
-      goerli: ETHERSCAN_KEY_GOERLI
+      goerli: ETHERSCAN_KEY_GOERLI,
+      // polygon
+      polygon: POLYGON_KEY_MUMBAI,
+      // mumbai: POLYGON_KEY_MUMBAI,
+      polygonMumbai: POLYGON_KEY_MUMBAI,
+      // gpex: POLYGON_KEY_MUMBAI
     }
   }
 };
