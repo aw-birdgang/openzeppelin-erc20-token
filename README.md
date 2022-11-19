@@ -26,6 +26,13 @@ npx hardhat run scripts/deploy-erc20-token.js --network goerli
 npx hardhat verify --network goerli 0xABFB8A9C66AcA998F68c7b4Ad58886E4090618EC --contract contracts/ILOVEYOUToken.sol:ILOVEYOUToken
 npx hardhat verify --constructor-args
 
+
+npx hardhat compile
+npx hardhat run scripts/deploy-erc20-token.js --network goerli
+npx hardhat verify --network goerli 0x1e2c9E83262C30847CFa486fBECFF03A525Bedae --contract contracts/YOULOVEMEToken.sol:YOULOVEMEToken
+npx hardhat verify --constructor-args
+
+
 npx hardhat compile
 npx hardhat run scripts/deploy-erc20-usdt-token.js --network goerli
 npx hardhat verify --network goerli 0xE6B8F12512a2bf04D84FA4EB0f17274E58A959d7
@@ -57,6 +64,12 @@ AMOUNT : 1,000,000,000 ILYT
 NETWORKS : goerli
 
 
+SYMBOL :  YOULOVEMEToken (YLMT)
+ADDRESS : 0x1e2c9E83262C30847CFa486fBECFF03A525Bedae
+AMOUNT : 1,000,000,000 ILYT
+NETWORKS : goerli
+
+
 SYMBOL : USDTB
 ADDRESS : 0x9182275157D8bDCe2C3f36FfBfD0b596Fa6D1D03
 AMOUNT : 1000000
@@ -82,5 +95,6 @@ https://goerli.etherscan.io/address/0xcbac53f2f7BfF399382180C3Ec35d0D79d56baf1#c
 
 https://goerli.etherscan.io/address/0x9182275157D8bDCe2C3f36FfBfD0b596Fa6D1D03#code
 https://goerli.etherscan.io/address/0xABFB8A9C66AcA998F68c7b4Ad58886E4090618EC#code
+https://goerli.etherscan.io/address/0x1e2c9E83262C30847CFa486fBECFF03A525Bedae#code
 
 ````

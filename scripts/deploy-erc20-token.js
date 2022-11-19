@@ -6,7 +6,7 @@ async function main() {
     console.log(`chainId : ${network.chainId}) `)
     console.log('Deploying contracts with the account :', deployer.address);
 
-    const Token = await ethers.getContractFactory("ILOVEYOUToken");
+    const Token = await ethers.getContractFactory("YOULOVEMEToken");
 
     // depoly
     const token = await Token.deploy();
