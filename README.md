@@ -18,7 +18,7 @@ npx hardhat
 ````
 npx hardhat compile
 npx hardhat run scripts/deploy-erc20-token.js --network goerli
-npx hardhat verify --network goerli 0xcbac53f2f7BfF399382180C3Ec35d0D79d56baf1
+npx hardhat verify --network goerli 0x78086EC1956bb17Db4f73390125Fc2FC0D16feAD --contract contracts/HIHIToken.sol:HIHIToken
 npx hardhat verify --constructor-args
 
 npx hardhat compile
@@ -67,6 +67,12 @@ NETWORKS : goerli
 SYMBOL :  YOULOVEMEToken (YLMT)
 ADDRESS : 0x1e2c9E83262C30847CFa486fBECFF03A525Bedae
 AMOUNT : 1,000,000,000 ILYT
+NETWORKS : goerli
+
+
+SYMBOL : HIHI
+ADDRESS : 0x78086EC1956bb17Db4f73390125Fc2FC0D16feAD
+AMOUNT : 100,000,000,000,000
 NETWORKS : goerli
 
 
