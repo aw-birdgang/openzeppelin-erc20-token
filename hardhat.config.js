@@ -45,7 +45,15 @@ module.exports = {
     mumbai: {
       url: `https://polygon-mumbai.infura.io/v3/${INFURA_KEY}`,
       accounts: [`0x${DEPLOYER_PRIVATE_KEY}`]
-    }
+    },
+    wemixtest: {
+      url: `https://api.test.wemix.com/`,
+      accounts: [`${DEPLOYER_PRIVATE_KEY}`]
+    },
+    gpextest: {
+      url: `https://testnet.rpc.gb.gpexdev.com`,
+      accounts: [`${DEPLOYER_PRIVATE_KEY}`]
+    },
   },
   etherscan: {
     apiKey: {
@@ -55,7 +63,8 @@ module.exports = {
       polygon: POLYGON_KEY_MUMBAI,
       // mumbai: POLYGON_KEY_MUMBAI,
       polygonMumbai: POLYGON_KEY_MUMBAI,
-      // gpex: POLYGON_KEY_MUMBAI
+      wemixtest: ETHERSCAN_KEY_GOERLI,
+      gpextest: ETHERSCAN_KEY_GOERLI
     }
   }
 };
