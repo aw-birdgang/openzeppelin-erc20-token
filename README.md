@@ -52,6 +52,12 @@ npx hardhat run scripts/deploy-erc20-token.js --network wemixtest
 
 Token address : 0x9BbC2dB2B8c98deFcE30a58265a13E76d0B84285
 
+
+npx hardhat compile
+npx hardhat run scripts/deploy-erc20-token.js --network goerli
+npx hardhat verify --network goerli 0xD6e2E917B7e29D9CF0dC3f29131d4f2A763338E2 --contract contracts/BirdgangToken.sol:BirdgangToken
+npx hardhat verify --constructor-args
+
 ````
 
 
@@ -100,6 +106,11 @@ SYMBOL : BGT
 ADDRESS : 0x9BbC2dB2B8c98deFcE30a58265a13E76d0B84285
 AMOUNT : 1000000
 NETWORKS : wemixtest
+
+
+
+OTHERS
+https://goerli.etherscan.io/address/0xD6e2E917B7e29D9CF0dC3f29131d4f2A763338E2#code
 
 ````
 
