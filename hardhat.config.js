@@ -9,14 +9,13 @@ require("@nomiclabs/hardhat-ethers");
 const {
   INFURA_KEY,
   DEPLOYER_PRIVATE_KEY,
-  ETHERSCAN_KEY_RINKEBY,
-  ETHERSCAN_KEY_GOERLI,
+  ETHERSCAN_KEY,
   POLYGON_KEY_MUMBAI
 } = process.env
 
 module.exports = {
   solidity: "0.8.9",
-  defaultNetwork: "goerli",
+  defaultNetwork: "sepolia",
   networks: {
     mainnet: {
       url: `https://mainnet.infura.io/v3/${INFURA_KEY}`,
@@ -24,6 +23,10 @@ module.exports = {
     },
     goerli: {
       url: `https://goerli.infura.io/v3/${INFURA_KEY}`,
+      accounts: [`0x${DEPLOYER_PRIVATE_KEY}`]
+    },
+    sepolia: {
+      url: `https://sepolia.infura.io/v3/${INFURA_KEY}`,
       accounts: [`0x${DEPLOYER_PRIVATE_KEY}`]
     },
     polygon: {
@@ -41,7 +44,8 @@ module.exports = {
   },
   etherscan: {
     apiKey: {
-      goerli: ETHERSCAN_KEY_GOERLI,
+      goerli: ETHERSCAN_KEY,
+      sepolia: ETHERSCAN_KEY,
       // polygon
       polygon: POLYGON_KEY_MUMBAI,
       // mumbai: POLYGON_KEY_MUMBAI,
